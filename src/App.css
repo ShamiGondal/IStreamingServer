@@ -9,25 +9,25 @@ body, html, #root {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 78vh;
+  height: 100vh;
   background-color: black;
 }
 
 .iframe-wrapper {
-  width: 100vw; /* Adjust width as needed */
-  height: 45vw; /* Adjust height as needed, maintaining aspect ratio */
+  width: 70vw; /* Decreased width */
+  height: 45vw; /* Adjust height to maintain aspect ratio */
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
   position: relative;
   background-color: white; /* Optional: background color for iframe wrapper */
-  border: 2px solid #000; /* Optional: border for iframe wrapper */
+  border: 0px solid #000; /* Optional: border for iframe wrapper */
 }
 
 .iframe {
   position: absolute;
   top: -170px; /* Adjust as needed to crop top */
-  left: -327px; /* Adjust as needed to crop left */
-  width: calc(100% + 910px); /* Width to cover and crop right */
-  height: calc(100% + 500px); /* Height to cover and crop bottom */
+  left: -200px; /* Adjust as needed to crop left */
+  width: calc(100% + 600px); /* Width to cover and crop right */
+  height: calc(100% + 400px); /* Height to cover and crop bottom */
 }

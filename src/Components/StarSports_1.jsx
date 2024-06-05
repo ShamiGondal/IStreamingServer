@@ -85,6 +85,39 @@ export default function StarSports_1() {
     
         iframe.onload = blockAdsAndRedirects;
       }, []);
+      
+      const preventDefault = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        console.log('Redirection blocked');
+        return false;
+      };
+    
+      const clickListener = (e) => {
+        if (e.target.tagName === 'A' || e.target.closest('a')) {
+          preventDefault(e);
+        }
+      };
+    
+      const submitListener = (e) => {
+        preventDefault(e);
+      };
+    
+      useEffect(() => {
+        // Add event listeners
+        document.addEventListener('click', clickListener);
+        document.addEventListener('submit', submitListener);
+    
+        // Intercept beforeunload event to prevent navigation
+        window.addEventListener('beforeunload', preventDefault);
+    
+        return () => {
+          // Remove event listeners
+          document.removeEventListener('click', clickListener);
+          document.removeEventListener('submit', submitListener);
+          window.removeEventListener('beforeunload', preventDefault);
+        };
+      }, []);
     
       return (
         <>
