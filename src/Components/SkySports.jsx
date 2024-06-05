@@ -123,16 +123,15 @@ export default function SkySports() {
         <>
           <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; frame-src https://crichdplay.info https://crichd.li;" />
           <div className="container">
-            <div className="iframe-wrapper">
-              <iframe
-                id="streaming-iframe"
-                src="https://crichdplay.info/channel/sky-sports-cricket-live-streaming-free-13/"
-                allowFullScreen
-                className="iframe"
-                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
-                style={{ border: 'none' }}
-              ></iframe>
-            </div>
+          <div className="iframe-wrapper">
+      <iframe
+        id="streaming-iframe"
+        src="https://crichdplay.info/channel/sky-sports-cricket-live-streaming-free-13/"
+        allowFullScreen
+        className="iframe "
+        sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+      ></iframe>
+    </div>
           </div>
         </>
       );

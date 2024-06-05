@@ -15,7 +15,7 @@ body, html, #root {
 
 .iframe-wrapper {
   width: 100vw; /* Adjust width as needed */
-  height: 55vw; /* Adjust height as needed, maintaining aspect ratio */
+  height: 100vw; /* Adjust height as needed, maintaining aspect ratio */
   max-width: 100%;
   max-height: 100%;
   overflow: hidden;
@@ -29,4 +29,14 @@ body, html, #root {
   left: -327px; /* Adjust as needed to crop left */
   width: calc(100% + 910px); /* Width to cover and crop right */
   height: calc(100% + 500px); /* Height to cover and crop bottom */
+}
+
+@media (max-width: 500px) {
+  .iframe {
+    position: absolute;
+    top: -170px; /* Adjust as needed to crop top */
+    left: -327px; /* Adjust as needed to crop left */
+    width: calc(40% + 910px); /* Width to cover and crop right */
+    height: calc(20% + 500px); /* Height to cover and crop bottom */
+  }
 }
