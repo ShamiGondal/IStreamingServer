@@ -40,3 +40,10 @@ body, html, #root {
     height: calc(20% + 500px); /* Height to cover and crop bottom */
   }
 }
+
+.scrollable-container {
+  height: 100vh; /* Full viewport height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  padding: 1rem; /* Optional: Add some padding */
+  padding-bottom: 4rem;
+}

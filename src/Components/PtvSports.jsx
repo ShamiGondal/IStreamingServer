@@ -9,8 +9,13 @@ import '../App.css';
 
 // Component
 const PtvSports = () => {
+ 
+
 
   useEffect(() => {
+
+
+
     const iframe = document.getElementById('streaming-iframe');
 
     const blockAdsAndRedirects = () => {
@@ -18,19 +23,19 @@ const PtvSports = () => {
         const iframeWindow = iframe.contentWindow;
 
         // Block popups and new windows
-        iframeWindow.open = function() {
+        iframeWindow.open = function () {
           console.log('Blocked a popup');
           return null;
         };
-        iframeWindow.alert = function() {
+        iframeWindow.alert = function () {
           console.log('Blocked an alert');
           return null;
         };
-        iframeWindow.confirm = function() {
+        iframeWindow.confirm = function () {
           console.log('Blocked a confirm dialog');
           return null;
         };
-        iframeWindow.prompt = function() {
+        iframeWindow.prompt = function () {
           console.log('Blocked a prompt dialog');
           return null;
         };
@@ -42,7 +47,7 @@ const PtvSports = () => {
           console.log('Blocked a redirection');
         };
 
-        iframeWindow.onbeforeunload = function() {
+        iframeWindow.onbeforeunload = function () {
           return 'Prevented redirection';
         };
 
@@ -92,8 +97,9 @@ const PtvSports = () => {
     };
 
     iframe.onload = blockAdsAndRedirects;
+
   }, []);
-  
+
   const preventDefault = (e) => {
     e.preventDefault();
     e.stopPropagation();
@@ -126,6 +132,7 @@ const PtvSports = () => {
       window.removeEventListener('beforeunload', preventDefault);
     };
   }, []);
+
 
   return (
     <>
