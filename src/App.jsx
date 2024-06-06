@@ -28,6 +28,7 @@ function App() {
             <Route path='/Sky-Sports' element={<SkySports />}></Route>
             <Route path='/Ten-Sports' element={<TenSports />}></Route>
             <Route path='/Ptv-Sports' element={<PtvSports />}></Route>
+            <Route path='/Star-Sports' element={<StarSports_1 />}></Route>
             <Route path='/Willow-Sports' element={<WillowSports />}></Route>
             <Route path='/SkySports-Arena' element={<Arena />}></Route>
             <Route path='/SkySports-Football' element={<Football />}></Route>
