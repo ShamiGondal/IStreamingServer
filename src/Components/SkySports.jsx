@@ -1,22 +1,10 @@
 import '../App.css';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 export default function SkySports() {
-  const [isLoading, setIsLoading] = useState(true);
-  const [loadError, setLoadError] = useState(false);
 
   useEffect(() => {
     const iframe = document.getElementById('streaming-iframe');
-
-    const handleLoad = () => {
-      setIsLoading(false);
-      setLoadError(false);
-    };
-
-    const handleError = () => {
-      setIsLoading(false);
-      setLoadError(true);
-    };
 
     const blockAdsAndRedirects = () => {
       if (iframe && iframe.contentWindow) {
@@ -65,7 +53,7 @@ export default function SkySports() {
             element.addEventListener('submit', preventRedirection);
           });
         };
-      
+
 
         // Block ad scripts
         const blockScripts = () => {
@@ -85,23 +73,10 @@ export default function SkySports() {
     };
 
     iframe.onload = blockAdsAndRedirects;
-    iframe.addEventListener('load', handleLoad);
-    iframe.addEventListener('error', handleError);
 
-    // Timeout to show "Unable to load" message if loading takes too long
-    const loadTimeout = setTimeout(() => {
-      if (isLoading) {
-        setIsLoading(false);
-        setLoadError(true);
-      }
-    }, 10000); // 10 seconds timeout
 
-    return () => {
-      clearTimeout(loadTimeout);
-      iframe.removeEventListener('load', handleLoad);
-      iframe.removeEventListener('error', handleError);
-    };
-  }, [isLoading]);
+  
+  },);
 
   const preventDefault = (e) => {
     e.preventDefault();
@@ -140,6 +115,7 @@ export default function SkySports() {
     <>
       <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; frame-src https://crichdplay.info https://crichd.li;" />
       <div className="container">
+
         <div className="iframe-wrapper">
           <iframe
             id="streaming-iframe"
@@ -149,6 +125,7 @@ export default function SkySports() {
             sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
           ></iframe>
         </div>
+
       </div>
     </>
   );
