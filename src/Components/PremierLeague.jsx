@@ -129,7 +129,6 @@ export default function PremierLeague() {
                 src="https://watch.crichd.run/sky-sports-premier-league-live-streaming-hd-7"
                 allowFullScreen
                 className="iframe"
-                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                 style={{ border: 'none' }}
               ></iframe>
             </div>

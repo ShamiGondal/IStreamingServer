@@ -129,7 +129,6 @@ export default function TNS() {
             src="https://watch.crichd.run/tsn-1-live-streaming-hd"
             allowFullScreen
             className="iframe"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             style={{ border: 'none' }}
           ></iframe>
         </div>

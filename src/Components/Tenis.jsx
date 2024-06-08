@@ -1,90 +1,8 @@
-import '../App.css';
+import '../crichd.css';
 import { useEffect } from 'react';
 
 export default function Tenis() {
-    useEffect(() => {
-        const iframe = document.getElementById('streaming-iframe');
-    
-        const blockAdsAndRedirects = () => {
-          if (iframe && iframe.contentWindow) {
-            const iframeWindow = iframe.contentWindow;
-    
-            // Block popups and new windows
-            iframeWindow.open = function() {
-              console.log('Blocked a popup');
-              return null;
-            };
-            iframeWindow.alert = function() {
-              console.log('Blocked an alert');
-              return null;
-            };
-            iframeWindow.confirm = function() {
-              console.log('Blocked a confirm dialog');
-              return null;
-            };
-            iframeWindow.prompt = function() {
-              console.log('Blocked a prompt dialog');
-              return null;
-            };
-    
-            // Prevent redirections
-            const preventRedirection = (event) => {
-              event.stopPropagation();
-              event.preventDefault();
-              console.log('Blocked a redirection');
-            };
-    
-            iframeWindow.onbeforeunload = function() {
-              return 'Prevented redirection';
-            };
-    
-            const blockLinks = () => {
-              const links = iframeWindow.document.querySelectorAll('a');
-              links.forEach(link => {
-                link.addEventListener('click', preventRedirection);
-              });
-            };
-    
-            const blockAdRedirections = () => {
-              const elements = iframeWindow.document.querySelectorAll('a, form');
-              elements.forEach(element => {
-                element.addEventListener('click', preventRedirection);
-                element.addEventListener('submit', preventRedirection);
-              });
-            };
-    
-            // Inject CSS to hide ads
-            const style = iframeWindow.document.createElement('style');
-            style.type = 'text/css';
-            style.innerHTML = `
-              .ad, .ads, .advertisement, [id*="ad"], [class*="ad"], [href*="ad"] {
-                display: none !important;
-              }
-              a[target="_blank"] {
-                pointer-events: none;
-              }
-            `;
-            iframeWindow.document.head.appendChild(style);
-    
-            // Block ad scripts
-            const blockScripts = () => {
-              const scripts = iframeWindow.document.querySelectorAll('script[src*="ad"], iframe[src*="ad"]');
-              scripts.forEach(script => script.remove());
-            };
-    
-            // Remove ads and block links periodically
-            setInterval(() => {
-              blockScripts();
-              const ads = iframeWindow.document.querySelectorAll('.ad, .ads, .advertisement');
-              ads.forEach(ad => ad.remove());
-              blockLinks();
-              blockAdRedirections();
-            }, 1000);
-          }
-        };
-    
-        iframe.onload = blockAdsAndRedirects;
-      }, []);
+ 
       
       const preventDefault = (e) => {
         e.preventDefault();
@@ -122,14 +40,13 @@ export default function Tenis() {
       return (
         <>
           <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; frame-src https://crichdplay.info https://crichd.li;" />
-          <div className="container">
-            <div className="iframe-wrapper">
+          <div className="cric_hd_container">
+            <div className="cric_hd_iframe-wrapper">
               <iframe
-                id="streaming-iframe"
+                id="cric_hd_streaming-iframe"
                 src="https://watch.crichd.run/sky-sports-tennis-hd-live-streaming-free-12"
                 allowFullScreen
-                className="iframe"
-                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
+                className="cric_hd_iframe"
                 style={{ border: 'none' }}
               ></iframe>
             </div>
