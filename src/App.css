@@ -20,7 +20,7 @@ body, html, #root {
   max-height: 100%;
   overflow: hidden;
   position: relative;
-  background-color: black; /* Optional: background color for iframe wrapper */
+  background-color: white; /* Optional: background color for iframe wrapper */
 }
 
 .iframe {
