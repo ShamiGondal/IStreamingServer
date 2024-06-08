@@ -25,8 +25,8 @@ body, html, #root {
 
 .iframe {
   position: absolute;
-  top: -170px; /* Adjust as needed to crop top */
-  left: -327px; /* Adjust as needed to crop left */
+  top: -215px; /* Adjust as needed to crop top */
+  left: -320px; /* Adjust as needed to crop left */
   width: calc(100% + 910px); /* Width to cover and crop right */
   height: calc(100% + 500px); /* Height to cover and crop bottom */
 }
@@ -34,9 +34,9 @@ body, html, #root {
 @media (max-width: 500px) {
   .iframe {
     position: absolute;
-    top: -170px; /* Adjust as needed to crop top */
-    left: -327px; /* Adjust as needed to crop left */
-    width: calc(40% + 910px); /* Width to cover and crop right */
+    top: -215px; /* Adjust as needed to crop top */
+    left: -320px; /* Adjust as needed to crop left */
+    width: calc(50% + 910px); /* Width to cover and crop right */
     height: calc(20% + 500px); /* Height to cover and crop bottom */
   }
 }
