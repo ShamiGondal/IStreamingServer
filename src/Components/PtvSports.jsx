@@ -66,19 +66,6 @@ const PtvSports = () => {
           });
         };
 
-        // Inject CSS to hide ads
-        const style = iframeWindow.document.createElement('style');
-        style.type = 'text/css';
-        style.innerHTML = `
-          .ad, .ads, .advertisement, [id*="ad"], [class*="ad"], [href*="ad"] {
-            display: none !important;
-          }
-          a[target="_blank"] {
-            pointer-events: none;
-          }
-        `;
-        iframeWindow.document.head.appendChild(style);
-
         // Block ad scripts
         const blockScripts = () => {
           const scripts = iframeWindow.document.querySelectorAll('script[src*="ad"], iframe[src*="ad"]');
