@@ -26,7 +26,7 @@ body, html, #root {
   .cric_hd_iframe {
     position: absolute;
     top: -354px; /* Adjust as needed to crop top */
-    left: -620px; /* Adjust as needed to crop left */
+    left: -320px; /* Adjust as needed to crop left */
     width: calc(100% + 910px); /* Width to cover and crop right */
     height: calc(100% + 500px); 
   }
@@ -35,9 +35,9 @@ body, html, #root {
     .cric_hd_iframe {
       position: absolute;
       top: -364px; /* Adjust as needed to crop top */
-      left: -620px; /* Adjust as needed to crop left */
+      left: -320px; /* Adjust as needed to crop left */
       width: calc(50% + 910px); /* Width to cover and crop right */
-      height: calc(20% + 500px); /* Height to cover and crop bottom */
+      height: calc(20% + 650px); /* Height to cover and crop bottom */
     }
   }
   
