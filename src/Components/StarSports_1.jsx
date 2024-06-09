@@ -119,7 +119,6 @@ export default function StarSports_1() {
             src="https://crichdplay.info/channel/star-sports-1-live-streaming-free-11/"
             allowFullScreen
             className="iframe"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             style={{ border: 'none' }}
           ></iframe>
         </div>

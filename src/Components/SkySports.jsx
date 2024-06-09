@@ -121,7 +121,6 @@ export default function SkySports() {
             src="https://crichdplay.info/channel/sky-sports-cricket-live-streaming-free-13/"
             allowFullScreen
             className="iframe"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
           ></iframe>
         </div>
 

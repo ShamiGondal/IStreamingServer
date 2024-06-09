@@ -118,7 +118,6 @@ export default function WillowSports() {
             src="https://crichdplay.info/channel/willow-cricket-live-streaming-free-11/"
             allowFullScreen
             className="iframe"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             style={{ border: 'none' }}
           ></iframe>
         </div>

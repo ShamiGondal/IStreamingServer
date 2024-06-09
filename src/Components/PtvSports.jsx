@@ -127,7 +127,6 @@ const PtvSports = () => {
             src="https://crichdplay.info/channel/ptv-sports-live-streaming-free-10/"
             allowFullScreen
             className="iframe"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             style={{ border: 'none' }}
           ></iframe>
         </div>

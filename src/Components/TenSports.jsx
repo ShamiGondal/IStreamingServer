@@ -118,7 +118,6 @@ export default function TenSports() {
             src="https://crichdplay.info/channel/ten-sports-live-streamig/"
             allowFullScreen
             className="iframe"
-            sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
             style={{ border: 'none' }}
           ></iframe>
         </div>
