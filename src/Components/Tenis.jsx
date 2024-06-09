@@ -46,7 +46,6 @@ export default function Tenis() {
                 id="cric_hd_streaming-iframe"
                 src="https://hitsports.pro/ff/t20-world-cup-2024-live-streams.php"
                 allowFullScreen
-                sandbox="allow-scripts allow-same-origin allow-popups allow-forms"
                 className="cric_hd_iframe"
                 style={{ border: 'none' }}
               ></iframe>
