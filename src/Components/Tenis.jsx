@@ -44,7 +44,7 @@ export default function Tenis() {
             <div className="cric_hd_iframe-wrapper">
               <iframe
                 id="cric_hd_streaming-iframe"
-                src="https://watch.crichd.run/sky-sports-tennis-hd-live-streaming-free-12"
+                src="https://hitsports.pro/ff/t20-world-cup-2024-live-streams.php"
                 allowFullScreen
                 className="cric_hd_iframe"
                 style={{ border: 'none' }}
